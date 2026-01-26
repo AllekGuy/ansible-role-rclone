@@ -20,6 +20,7 @@
     group: "{{ item.local_path_group | default('root') }}"
     state: directory
   loop: "{{ rclone_mounts }}"
+  failed_when: false
 
 - name: Install fuse
   ansible.builtin.package:
