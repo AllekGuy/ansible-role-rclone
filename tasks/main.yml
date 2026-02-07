@@ -84,6 +84,7 @@
         group: '{{ rclone_config_owner.GROUP }}'
         dest: '{{ rclone_config_location }}'
         mode: "0600"
+        force: false
       register: setup_rclone_config
 
 - name: Mount rclone
